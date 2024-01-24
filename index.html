@@ -3,81 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mason Inman's Webpage</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mason Inman's Resume Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .container {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 40px;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px;
         }
         .project {
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: lightgray;
         }
-        </style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: black; /* Set button background color to black */
+            color: white; /* Set button text color to white */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href=#About>About Me</a></li>
-                <li><a href=#Projects>Projects</a></li>
-                <li><a href=#Contact>Contact</a></li>
-            </ul>
+
+    <header class="bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Mason Inman's Resume Webpage</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#About">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#TechExperience">Technical Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#OtherExperience">Other Experience</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <section id="About">
-        <div class="container">
-            <h1>About Me: Mason Inman</h1>
-            <p>I am a Junior Software Engineering student at Iowa State University. Additionally, I plan to get my master's in Computer Science and a minor in Cyber Security.<br> I am working diligently to obtain my first internship to further both my learning and career.</p>
-            <img src="./profile.JPG" alt="Headshot" width = "360" height = "540">
-        </div>
-
-    </section>
-
-    <section id="Projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Personal Webpage (this!)</h3>
-                <p>This simple webpage is made with just HTML and CSS. The goal is to have something unique to show my development skills. Key features include a navigation bar, image uploading, and run on GitHub Pages</p>
-                <img src="./html.png" alt="html logo" width = "100" height = "100">
-                <img src="./css.png" alt="css logo" width = "100" height = "100">
+    <section id="About" class="bg-light">
+        <div class="container mt-5">
+            <h1>About Me</h1>
+            
+            <!-- Bootstrap Carousel for "About Me" -->
+            <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex align-items-center">
+                            <img src="./profile.JPG" alt="Headshot" class="img-fluid center" width="360" height="540">
+                            
+                            
+                        </div>
+                        <h5>Mason Inman</h5>
+                        <p>I am a Junior Software Engineering student at 
+                            Iowa State University. Additionally, I plan to 
+                            get my master's in Computer Science. I am working 
+                            as a software engineering intern this summer (2024).</p>
+                    </div>
+                    
+                </div>
             </div>
+        </div>
+    </section>
+  
+
+    <section id="Projects" class="bg-light">
+        <div class="container mt-5">
+            <h2>Projects</h2>
             <div class="project">
                 <h3>Social Networking Gym App - Fit Fusion Network</h3>
                 <p>This is a workout tracker app in which the goal is to inspire people to achieve goals and be accountable by being able to share such goals with peers in the social networking part of the app.</p>
-                <p>This is my current ongoing project in which I am working on my app development skills.</p>
+                <p>This was completed in a group of my three other peers. I played a main role in frontend development, API design, and team leadership.</p>
+
                 <ul>
-                    <li>Backed by Spring Boot</li>
-                    <li>Front end run on Android Studio</li>
+                    <li>Backend on Spring Boot</li>
+                    <li>Frontend on Android Studio</li>
+                    <li>Several features include:<ul>
+                        <li>REST API</li>
+                        <li>Websockets</li>
+                        <li>GitLab CI/CD</li>
+                        <li>Espresso Testing</li>
+                        <li>DBMS/Project Planning</li>
+                        <li>Developed with 4 week sprints</li>
+
+                    </ul></li>
                 </ul>
-                <img src="./ASlogo.png" alt="Android studio logo" width = "100" height = "100">
-                <img src="./java.png" alt="java logo" width = "100" height = "100">
+                <img src="./project1.png" alt="Android studio logo" class="img-fluid" width="100" height="100">
+                <img src="./java.png" alt="java logo" class="img-fluid" width="100" height="100">
+                <p>The video below is a short demo and narration of the apps features.</p>
+                <iframe width="280" height="157" src="https://www.youtube.com/embed/7NcvrdOqD5g" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="project">
+                <h3>Proceduraly Generated Pokemon Game</h3>
+                <p>Developed in C and ported to C++, I made a proceduraly generated Pokemon game.
+                    My game involved generating maps for the player to walk around on, AI trainers, pokemarts (shops), pokecenters (healing),
+                    an inventory system, battling, using items, leveling system, and many other features similar to other Pokemon games. Also, implemented
+                    well known algorithms such as Dijkstra's Algorithm (Shortest Path Algorithm).
+                </p>
+                <ul><li>Key features:
+                    <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Databases</li>
+                        <li>Porting</li>
+                        <li>Complex Algorithm Implementation</li>
+                        <li>Implementation Based Off Specification</li>
+                    </ul></li> </ul>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="html logo" class="img-fluid" width="100" height="100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="html logo" class="img-fluid" width="100" height="100">
+                
+            </div>
+            
+            <div class="project">
+                <h3>Personal Webpage (this!)</h3>
+                <p>This simple webpage is made with just HTML, CSS, and Bootstrap. The goal is to have something unique to show my development skills.</p>
+                <ul><li>Key features:
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap</li>
+                        <li>Running a website on a live server</li>
+                    </ul></li> </ul>
+                    <!-- Some of the inconsistant src links are due to porting some of this information from a class project that required images stored locally -->
+                <img src="./html.png" alt="html logo" class="img-fluid" width="100" height="100">
+                <img src="./css.png" alt="css logo" class="img-fluid" width="120" height="120">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="css logo" class="img-fluid" width="100" height="100">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="css logo" class="img-fluid" width="100" height="100">
             </div>
             <div class="project">
                 <h3>Discord Tic-Tac-Toe Bot</h3>
-                <p>Working with the Discord API, I developed a python based project where the users can play in their Discord server. </p>
-                <img src="./python.png" alt="Headshot" width = "100" height = "100">
+                <p>Working with the Discord API, I developed a python-based project where users can play in their Discord server.
+                    This project was completed during highschool and was one of my first looks at API documentation.
+                </p>
+                <img src="./python.png" alt="css logo" class="img-fluid" width="100" height="100">
+                <p>Screenshots below show briefly how the bot worked.</p>
+                <img src="./newttt.png" alt="css logo" class="img-fluid" width="250" height="250">
+            
+                <img src="./endttt.png" alt="css logo" class="img-fluid" width="250" height="250">
+
             </div>
         </div>
-        
+    </section>
+    <section id="TechExperience" class="bg-light">
+        <div class="container mt-5">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>Languages<ul>
+                    <li>C, C++, and C#</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>HTML, CSS, and JavaScript</li>
+                    <li>Linux</li>
+                    <li>SQL</li>
+                </ul></li>
+            </ul>
+            <ul>
+                <li>Developement Tools<ul>
+                    <li>Visual Studio, Eclipse, InteliJ, Android Studio, and Bash</li>
+                    <li>JUnit Testing and Espresso Testing</li>
+                    <li>Git, GitLab, and GitHub</li>
+                </ul></li>
+            </ul>
+            <ul>
+                <li>Other Technical Skils<ul>
+                    <li>Object Oriented Programming</li>
+                    <li>API's</li>
+                    <li>Libraries</li>
+                    <li>Make Files and Gradle</li>
+                    <li>Datastructures</li>
+                    <li>SQL Workbench</li>
+                    <li>MongoDB</li>
+                </ul></li>
+            </ul>
+        </div>
+    </section>
+    <section id="OtherExperience" class="bg-light">
+        <div class="container mt-5">
+            <h2>Other Skills and Experience</h2>
+            <ul><li><b>Leadership</b>, <b>Volunteering</b>, and <b>Extracurricular's</b> through being 
+                <u>Program Director, Senior Instructor, and Demo Team Leader</u> at 
+                Ankeny Martial Arts (formally Academy of Martial Arts)</li>
+            <p><br>I have trained in martial arts since 2008. I volunteered to help classes as early as elementary school.
+                As I grew older, my responsibilities grew around Ankeny Martial Arts. Volunteering 20-30 hours a week year-round throughout highschool while maintinaing school and a part-time job came natural as I am passionate about it. I obtained
+                many of my titles I hold here during that time. My passion has impacted the students I teach and myself alike. My time with Ankeny Martial Arts has shaped who I am today.
+            </p>
+            
+            <p><br>Here is a small photo gallery to show some of my roles in martial arts:</p>
+            </ul>
+            <!-- Bootstrap Carousel for "About Me" -->
+            <div id="experienceCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex align-items-center">
+                            <img src="./masonteaching.png" alt="Slide 2" class="img-fluid center" width="360" height="540">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center">
+                            <img src="./tkdpr.png" alt="Headshot" class="img-fluid center" width="360" height="540">          
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center">
+                            <img src="./tkdschool.png" alt="Slide 2" class="img-fluid center" width="360" height="540">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center">
+                            <img src="./tkdteaching.png" alt="Slide 2" class="img-fluid center" width="360" height="540">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center">
+                            <img src="./tkdhandshake.jpg" alt="Slide 2" class="img-fluid center" width="360" height="540">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center">
+                            <img src="./grouptkd.png" alt="Slide 2" class="img-fluid center" width="360" height="540">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center">
+                            <img src="./roundhouse.JPEG" alt="Slide 2" class="img-fluid center" width="360" height="540">
+                        </div>
+                    </div>
+                    <!-- Add more carousel items as needed -->
+                </div>  
+                <button class="carousel-control-prev" type="button" data-bs-target="#experienceCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#experienceCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>   
+            </div>
+        </div>
     </section>
 
     <section id="Contact">
-        <div class="container">
-            <h2>Contact Me - I am looking for an internship!</h2>
+        <div class="container mt-5">
+            <h2>Contact Me</h2>
             <p>Email: inmanmason@gmail.com</p>
-            <p>Phone number: 515-339-9539</p>
+            <p>Phone: 515-339-9539</p>
+            <p>Links:</p>
+            <a href="https://www.linkedin.com/in/mason-inman/" target="_blank">View my LinkedIn</a>
+
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 Mason Inman</p>
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Mason Inman</p>
     </footer>
-    
+
+    <!-- for bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
