@@ -7,6 +7,8 @@
     <title>Mason Inman's Resume Webpage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -38,7 +40,7 @@
                             <a class="nav-link" href="index.html#OtherExperience">Other Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#Contact">Contact</a>
+                            <a class="nav-link" href="#Contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -50,16 +52,15 @@
         <h2 class="white center"><br><br><b>Welcome to the Project Page!</b><br><br><br><br><br><br><br></h2>
     </section>
     <section id="projectPageInfo">
-        <div class="AboutMeDescription">
-            <p>View my projects below and click into ones that interest you!</p>
-            <p>I have listed several of my projects I have worked on in the past, or am currently working on.</p>
-            <p>If you have any questions or comments, <a href="index.html#Contact">contact me here</a>.</p>
-
-        </div>
 
     </section>
     <section id="Projects" class="bg-light">
         <div class="container mt-5">
+
+            <p>View my projects below and click into ones that interest you!</p>
+            <p>I have listed several of my projects I have worked on in the past, or am currently working on.</p>
+            <p>If you have any questions or comments, <a href="index.html#Contact">contact me here</a>.</p>
+
             <h2>Projects</h2>
 
             <!-- Bootstrap Accordion for Projects -->
@@ -101,8 +102,8 @@
                                 </li>
                             </ul>
                             <p>The video below is a short demo and narration of the apps features.</p>
-                            <iframe width="280" height="157" src="https://www.youtube.com/embed/7NcvrdOqD5g"
-                                frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/7NcvrdOqD5g" frameborder="0"
+                                allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -192,14 +193,73 @@
                     <h2 class="accordion-header" id="project7Heading">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#project7Collapse" aria-expanded="false" aria-controls="project7Collapse">
-                            Dissasembler for ARMv8 Assembly Binary Files
+                            Dissasembler for ARMv8 Assembly
                         </button>
                     </h2>
                     <div id="project7Collapse" class="accordion-collapse collapse" aria-labelledby="project7Heading"
                         data-bs-parent="#projectAccordion">
                         <div class="accordion-body">
-                          
-                            <p>Will update the information for this project soon! Contact me if you would like to know more quicker.</p>
+
+                            <p>Disassembling a binary file into ARMv8 assembly language, more specifically the LEGv8
+                                subset.
+                                The output file is functionally identical to the input file when done properly. Uses a
+                                LEGv8 emulator to run make LEGv8 binary files for input, then prints to console and a
+                                file.</p>
+                            <p>I worked with two other partners on this project, mainly to split up the tedius
+                                bit-manipulation needed to decode each isntruction in the instruction set.</p>
+                            <ul>
+                                <li>Key features:
+                                    <ul>
+                                        <li>Assembly Programming (ARMv8 / LEGv8)</li>
+                                        <li>C++</li>
+                                        <li>Git</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                                alt="html logo" class="img-fluid" width="100" height="100">
+
+                            <p> Here is a sample output file from the program, this file's purpose was to test many
+                                instructions, this example does not do anything specifically.</p>
+                            <code>ADD X0, X1, X2<br>
+                                ADDI X3, X4, #10<br>
+                                AND X5, X6, X7<br>
+                                ANDI X8, X9, #15<br>
+                                B label_line_14<br>
+                                EOR X12, X13, X14<br>
+                                EORI X15, X16, #20<br>
+                                LDUR X17, [X18, #24]<br>
+                                LSL X19, X20, #3<br>
+                                LSR X21, X22, #4<br>
+                                ORR X23, X24, X25<br>
+                                ORRI X26, X27, #30<br>
+                                STUR X28, [X29, #36]<br>
+                                label_line_14:<br>
+                                SUB X30, X31, X0<br>
+                                SUBI X1, X2, #40<br>
+                                SUBIS X3, X4, #50<br>
+                                SUBS X5, X6, X7<br>
+                                B.EQ label_line_41<br>
+                                B.NE label_line_42<br>
+                                B.MI label_line_43<br>
+                                B.PL label_line_44<br>
+                                B.HS label_line_45<br>
+                                B.LO label_line_46<br>
+                                B.VS label_line_47<br>
+                                B.VC label_line_48<br>
+                                B.HI label_line_49<br>
+                                B.LS label_line_50<br>
+                                B.LT label_line_51<br>
+                                B.LE label_line_52<br>
+                                B.GT label_line_53<br>
+                                B.GE label_line_54<br>
+                                label_line_32:<br>
+                                ADD X0, X0, X0<br>
+                                MUL X8, X9, X10<br>
+                                PRNT X11<br>
+                                PRNL<br>
+                                DUMP<br>
+                                HALT<br></code>
                         </div>
                     </div>
                 </div>
@@ -216,7 +276,32 @@
                     <div id="project8Collapse" class="accordion-collapse collapse" aria-labelledby="project8Heading"
                         data-bs-parent="#projectAccordion">
                         <div class="accordion-body">
-                            <p>Will update the information for this project soon! Contact me if you would like to know more quicker.</p>
+                            <p>Using a Java UI Frontend and a SQL DB (just run locally for the purpose of the project) I
+                                created a ATM Banking Network.
+                                Users can make accounts, transfer money, pay bills, and all accounts are stored in the
+                                DB.
+                                Additionally, this is fully tested in JUnit 5.
+                            </p>
+
+                            <ul>
+                                <li>Key features:
+                                    <ul>
+                                        <li>Java</li>
+                                        <li>SQL DB</li>
+                                        <li>JUnit 5</li>
+                                        <li>Object Oriented Programming</li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p>This project utilizes a layered architecture. There is a bank object that holds SQL
+                                Connection and several ATM's that connect to the bank. Furthermore, a User can login to
+                                an ATM, which every user has Checking and Savings Accounts.</p>
+                            <img src="https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png
+                            " alt="python logo" class="img-fluid" width="100" height="100">
+                            <img src="./image/java.png" alt="java logo" class="img-fluid" width="100" height="100">
+
 
                         </div>
                     </div>
@@ -224,7 +309,7 @@
 
                 <!-- Project 9 -->
 
-                <div class="accordion-item">
+                <!-- <div class="accordion-item">
                     <h2 class="accordion-header" id="project8Heading">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#project9Collapse" aria-expanded="false" aria-controls="project9Collapse">
@@ -238,7 +323,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Project 4 -->
 
@@ -252,7 +337,8 @@
                     <div id="project4Collapse" class="accordion-collapse collapse" aria-labelledby="project4Heading"
                         data-bs-parent="#projectAccordion">
                         <div class="accordion-body">
-                            <p>This project started just because I thought it was fun. It ended up goind into researching 
+                            <p>This project started just because I thought it was fun. It ended up goind into
+                                researching
                                 algorithms and the Turing Complete nature of the
                                 deterministic rules in this game.</p>
                             <p>Rules:</p>
@@ -273,20 +359,18 @@
                                 explanations of the structures. <a
                                     href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia - Conway's
                                     Game of Life</a></p>
-
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
-                                alt="html logo" class="img-fluid" width="100" height="100">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
                                 alt="html logo" class="img-fluid" width="100" height="100">
                             <p>Patterns like this sparked my interest (from the Wikipedia):</p>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif"
                                 alt="html logo" class="img-fluid">
-                            <p>So, I looked into how you actually can make computer architecture all with these patterns utilizing th glider guns and various oscillators. So, I put together a C++ program to try it out myself.</p>
-                            <img src="image/conwayOptions.png"
-                            alt="html logo" class="img-fluid">
-                            <img src="image/conwayGlider.png"
-                            alt="html logo" class="img-fluid">
-                            <p>Note: My program simulates the movement like the gif above, the screenshot I took does not convey this.</p>
+                            <p>So, I looked into how you actually can make computer architecture all with these patterns
+                                utilizing th glider guns and various oscillators. So, I put together a C++ program to
+                                try it out myself.</p>
+                            <img src="image/conwayOptions.png" alt="conway logo" class="img-fluid">
+                            <img src="image/conwayGlider.png" alt="conway logo" class="img-fluid">
+                            <p>Note: My program simulates the movement like the gif above, the screenshot I took does
+                                not convey this.</p>
                         </div>
                     </div>
                 </div>
@@ -310,11 +394,11 @@
                                 This project was completed during highschool and was one of my first looks at API
                                 documentation.
                             </p>
-                            <img src="./image/python.png" alt="css logo" class="img-fluid" width="100" height="100">
+                            <img src="./image/python.png" alt="python logo" class="img-fluid" width="100" height="100">
                             <p>Screenshots below show briefly how the bot worked.</p>
-                            <img src="./image/newttt.png" alt="css logo" class="img-fluid" width="250" height="250">
+                            <img src="./image/newttt.png" alt="ttt" class="img-fluid" width="250" height="250">
 
-                            <img src="./image/endttt.png" alt="css logo" class="img-fluid" width="250" height="250">
+                            <img src="./image/endttt.png" alt="ttt" class="img-fluid" width="250" height="250">
 
                         </div>
                     </div>
@@ -332,7 +416,7 @@
                     <div id="project6Collapse" class="accordion-collapse collapse" aria-labelledby="project6Heading"
                         data-bs-parent="#projectAccordion">
                         <div class="accordion-body">
-                            <p>This simple webpage is made with just HTML, CSS, and Bootstrap. The goal is to have
+                            <p>This webpage is made using HTML, CSS, and Bootstrap. The goal is to have
                                 something unique to show my development skills.</p>
                             <ul>
                                 <li>Key features:
@@ -344,6 +428,7 @@
                                     </ul>
                                 </li>
                             </ul>
+
                             <img src="./image/html.png" alt="css logo" class="img-fluid" width="105" height="105">
                             <img src="./image/css.png" alt="css logo" class="img-fluid" width="120" height="120">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg"
@@ -354,113 +439,41 @@
                         </div>
                     </div>
                 </div>
-
-
-
-                <!-- <section id="Projects" class="bg-light">
-            <div class="container mt-5">
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3>Social Networking Gym App - Fit Fusion Network</h3>
-                    <p>This is a workout tracker app in which the goal is to inspire people to achieve goals and be accountable by being able to share such goals with peers in the social networking part of the app.</p>
-                    <p>This was completed in a group of my three other peers. I played a main role in frontend development, API design, and team leadership.</p>
-    
-                    <ul>
-                        <li>Backend on Spring Boot</li>
-                        <li>Frontend on Android Studio</li>
-                        <li>Several features include:<ul>
-                            <li>REST API</li>
-                            <li>Websockets</li>
-                            <li>GitLab CI/CD</li>
-                            <li>Espresso Testing</li>
-                            <li>DBMS/Project Planning</li>
-                            <li>Developed with 4 week sprints</li>
-    
-                        </ul></li>
-                    </ul>
-                    <img src="./image/project1.png" alt="Android studio logo" class="img-fluid" width="100" height="100">
-                    <img src="./image/java.png" alt="java logo" class="img-fluid" width="100" height="100">
-                    <p>The video below is a short demo and narration of the apps features.</p>
-                    <iframe width="280" height="157" src="https://www.youtube.com/embed/7NcvrdOqD5g" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="project">
-                    <h3>Proceduraly Generated Pokemon Game</h3>
-                    <p>Developed in C and ported to C++, I made a proceduraly generated Pokemon game.
-                        My game involved generating maps for the player to walk around on, AI trainers, pokemarts (shops), pokecenters (healing),
-                        an inventory system, battling, using items, leveling system, and many other features similar to other Pokemon games. Also, implemented
-                        well known algorithms such as Dijkstra's Algorithm (Shortest Path Algorithm).
-                    </p>
-                    <ul><li>Key features:
-                        <ul>
-                            <li>C</li>
-                            <li>C++</li>
-                            <li>Databases</li>
-                            <li>Porting</li>
-                            <li>Complex Algorithm Implementation</li>
-                            <li>Implementation Based Off Specification</li>
-                        </ul></li> </ul>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="html logo" class="img-fluid" width="100" height="100">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="html logo" class="img-fluid" width="100" height="100">
-                    
-                </div>
-                
-                <div class="project">
-                    <h3>Personal Webpage (this!)</h3>
-                    <p>This simple webpage is made with just HTML, CSS, and Bootstrap. The goal is to have something unique to show my development skills.</p>
-                    <ul><li>Key features:
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Bootstrap</li>
-                            <li>Running a website on a live server</li>
-                        </ul></li> </ul>
-                        <!-- Some of the inconsistant src links are due to porting some of this information from a class project that required images stored locally -->
-                <!--<img src="./image/html.png" alt="html logo" class="img-fluid" width="100" height="100">
-                    <img src="./image/css.png" alt="css logo" class="img-fluid" width="120" height="120">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="css logo" class="img-fluid" width="100" height="100">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="css logo" class="img-fluid" width="100" height="100">
-                </div>
-                <div class="project">
-                    <h3>Discord Tic-Tac-Toe Bot</h3>
-                    <p>Working with the Discord API, I developed a python-based project where users can play in their Discord server.
-                        This project was completed during highschool and was one of my first looks at API documentation.
-                    </p>
-                    <img src="./image/python.png" alt="css logo" class="img-fluid" width="100" height="100">
-                    <p>Screenshots below show briefly how the bot worked.</p>
-                    <img src="./image/newttt.png" alt="css logo" class="img-fluid" width="250" height="250">
-                
-                    <img src="./image/endttt.png" alt="css logo" class="img-fluid" width="250" height="250">
-    
-                </div>
             </div>
-        </section> -->
-                <section id="Contact">
-                    <div class="container mt-5">
-                        <h2>Contact Me</h2>
-                        <p>Email: inmanmason@gmail.com</p>
-                        <p>Phone: 515-339-9539</p>
-                        <p>Links:</p>
-                        <a href="https://www.linkedin.com/in/mason-inman/" target="_blank">View my LinkedIn</a>
-
-                    </div>
-                </section>
-
-                <footer class="text-center py-3">
-                    <p>&copy; 2024 Mason Inman</p>
-                </footer>
+        </div>
+        <footer>
+            <section id="Contact" class="text-left">
+                <div class="container mt-5">
+                    <h2>Contact Me</h2>
 
 
-                <!-- for bootstrap -->
-                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-                <!-- <script>
-        window.addEventListener('scroll', function() {
-            const scrolled = window.scrollY;
-            const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-            const opacity = scrolled / vh;
-            document.querySelector('.gradient-background').style.opacity = opacity;
-        });
-    </script> -->
+                    <p><strong>Email:</strong> inmanmason@gmail.com@gmail.com</p>
+                    <p><strong>Phone:</strong> 515-339-9539</p>
+                    <p><strong>Links:</strong></p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.linkedin.com/in/mason-inman/" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/MasonInman29" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </section>
+            <p class="text-center py-3">&copy; 2024 Mason Inman</p>
+        </footer>
+
+
+        <!-- for bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
